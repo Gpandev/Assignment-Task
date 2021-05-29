@@ -1,0 +1,54 @@
+.site-sport {
+    background: #FAFAFA;
+    margin-top: 3.125em;
+
+    hr {
+        border: 1px solid #DDDDDD;
+    }
+
+    .sport-wrapper-page {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+        justify-content: space-around;
+        width: 76.25em;
+        height: 30.31em;
+        margin: 0 21.875em;
+
+        h3{
+            flex: 0 1 100%;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 1.25em;
+            line-height: 1.5em;
+            margin-bottom: 2em;
+            padding: 0;
+        }
+
+        .sport-news-box {
+            display: flex;
+            flex-wrap: wrap;
+            flex: 0 1 25%;
+            width: 17.19em;
+            height: 11.25em;
+            margin-bottom: 4.375em;
+
+            span {
+                flex: 0 1 100%;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 1.25em;
+                line-height: 1.625em;
+                color: #000000;
+            }
+
+            p {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 0.875em;
+                line-height: 1.125em;
+            }
+        }
+    }
+}

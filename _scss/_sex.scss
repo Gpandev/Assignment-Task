@@ -1,0 +1,46 @@
+.site-sex-page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 76.25em;
+    margin: 0 auto;
+
+    .hr-top {
+        width: 76.25em;
+        height: 4px;
+        background: #D24545;
+        border-radius: 0.3125em;
+        margin-top: 3.125em;
+    }
+
+    h3 {
+        flex: 0 1 100%;
+        padding: 0;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 1.25em;
+        line-height: 1.5em;
+        margin-bottom: 1.5em;
+    }
+
+    .sex-box {
+        display: flex;
+        flex-wrap: wrap;
+        flex: 1 1 32%;
+    
+        span {
+            font-weight: 600;
+            font-size: 1.25em;
+            line-height: 1.625em;
+        } 
+    
+        p {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 0.875em;
+            line-height: 1.125em;
+        }
+    }
+}
+
+
