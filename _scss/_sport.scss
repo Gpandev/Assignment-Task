@@ -3,6 +3,10 @@
     margin-top: 3.125em;
     flex: 0 1 100%;
 
+    @include bp(tablet) { 
+        margin: 1em;
+    }
+
     hr {
         border: 1px solid #DDDDDD;
     }
@@ -11,10 +15,14 @@
         display: flex;
         flex-wrap: wrap;
         align-content: center;
-        justify-content: center;
+        justify-content: space-between;
         min-height: 30.31em;
-        
 
+        @include bp(phone) {
+            justify-content: center;
+            margin: 1em;
+        }
+        
         h3{
             flex: 0 1 100%;
             font-style: normal;
@@ -36,6 +44,12 @@
             
 
             span {
+                @include bp (phone) {
+                    font-size: 1.1em;
+                    line-height: 1.2em;
+                    padding-bottom: 0.5em;
+                }
+
                 flex: 0 1 100%;
                 font-style: normal;
                 font-weight: 600;

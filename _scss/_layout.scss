@@ -355,50 +355,6 @@ body {
     color: #FFFFFF;  
 }
 
-.special-features-wrapper {
-    display: flex;
-    background-color: #B53838;
-    min-height: 34.375em; 
-    flex: 0 1 100%;
-    align-content: center;
-    flex-direction: column;
-}
-    
-.site-specialFeatures {
-    display: flex;
-    flex-wrap: wrap; 
-    color: white;
-    justify-content: center;
-}
-
-.site-specialFeatures h3{
-    flex: 0 1 100%;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 1.25em;
-    line-height: 1.5em;
-    margin-bottom: 1.5em;
-}
-
-.site-specialFeatures div  {
-    display: flex;
-    flex-wrap: wrap;
-    flex: 0 1 100%;
-    position: relative;
-    padding: 0.3em;
-}
-
-.site-specialFeatures div img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.site-specialFeatures div p {
-    padding: 0;
-}
-
-
 
 /*************    Footer   ************/
 

@@ -1,45 +1,74 @@
 .site-sex-page {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-   
+    flex: 0 1 100%;
 
-    .hr-top {
-        width: 76.25em;
+    hr {
         height: 4px;
         background: #D24545;
         border-radius: 0.3125em;
         margin-top: 3.125em;
     }
 
-    h3 {
-        flex: 0 1 100%;
-        padding: 0;
-        font-style: normal;
-        font-weight: 800;
-        font-size: 1.25em;
-        line-height: 1.5em;
-        margin-bottom: 1.5em;
-    }
-
-    .sex-box {
+    .sex-wrapper-page {
         display: flex;
         flex-wrap: wrap;
-        flex: 1 1 32%;
-    
-        span {
-            font-weight: 600;
-            font-size: 1.25em;
-            line-height: 1.625em;
-        } 
-    
-        p {
-            font-style: normal;
-            font-weight: normal;
-            font-size: 0.875em;
-            line-height: 1.125em;
+        align-content: center;
+        justify-content: space-between;
+        min-height: 30em;
+
+        @include bp(mobile) {
+            justify-content: space-evenly;
+            margin: 1em;
         }
+
+        h3 {
+            flex: 0 1 100%;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 1.25em;
+            line-height: 1.5em;
+            margin-bottom: 2em;
+            padding-left: 0.5em;
+        }
+
+        .sex-box {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            flex: 0 1 33%;
+            max-width: 23.75em;
+            min-height: 15.625em;
+            margin-bottom: 4.375em;
+            padding: 0.5em;
+
+            @include bp(mobile) {
+                justify-content: space-evenly;
+                flex: 0 1 100%;
+                margin: 1em;
+                padding: 0.5em;
+            }
+
+            span {
+                @include bp (phone) {
+                    font-size: 1.1em;
+                    line-height: 1.2em;
+                    padding-bottom: 0.5em;
+                }
+
+                flex: 0 1 100%;
+                font-weight: 600;
+                font-size: 1.25em;
+                line-height: 1.625em;
+                color: #000000;
+            }
+
+            p {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 0.875em;
+                line-height: 1.125em;
+            }
+        }
+
     }
+
 }
-
-
