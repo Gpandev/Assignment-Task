@@ -30,7 +30,7 @@
             flex-direction: row; 
             flex: 0 1 33%;
             color: white;
-            justify-content: center;
+            
             max-width: 23.75em;
             min-height: 15.625em;
 
@@ -57,11 +57,14 @@
 
             }
             
-            img {
-                display: block;
-                width: 100%;
-                height: auto;
-            } 
+            @include bp(mobile) {
+               img {
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                }  
+            }
+            
         }
     }  
 }
