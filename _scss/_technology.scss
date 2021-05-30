@@ -1,94 +1,126 @@
 .site-technology {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    width: 76.25em;
-    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    
 
     .hr-top {
-        width: 76.25em;
-        height: 0.25em;
         background: #D24545;
         border-radius: 0.3125em;
         margin-top: 3.125em;
     }
 
-    h3 {
-        flex: 0 1 100%;
-        padding: 0;
-        font-style: normal;
-        font-weight: 800;
-        font-size: 1.25em;
-        line-height: 1.5em;
-        margin-bottom: 1.4375em;
-    }
-
-    .main-news {
+    .technology-wrapper-page {
         display: flex;
         flex-wrap: wrap;
-        flex: 0 1 50%;
+        flex-direction: column;
 
-        span {
-            font-weight: 600;
+        @include bp(mobile) {
+            justify-content: center;
+        }
+
+        h3 {
+            flex: 0 1 100%;
+            padding: 0;
+            font-style: normal;
+            font-weight: 800;
             font-size: 1.25em;
-            line-height: 1.625em;
-        }
-
-        p {
-            font-style: normal;
-            font-weight: normal;
-            font-size: 0.875em;
-            line-height: 1.125em;
-        }
-
-        .second {
-            font-style: normal;
-            font-weight: normal;
-            font-size: 1em;
             line-height: 1.5em;
+            margin-bottom: 1.4375em;
         }
-
-        a {
-            text-decoration: none;
-            color: black;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 1em;
-            line-height: 1.19em;
-            margin-right: 0.625em;
-        }
-
-        img {
-            width: 36.875em;
-            height: 25.69em;
-        }
-    }
     
-    .technology-news {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        flex: 0 1 50%;
+        .main-news {
 
-        .news-box {
-            flex: 0 1 45%;
-
+            @include bp(phone) {
+                flex-direction: row;
+            }
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            
+            flex: 0 1 50%;
+            padding: 1em;
+            
+    
             span {
                 font-weight: 600;
                 font-size: 1.25em;
                 line-height: 1.625em;
             }
-
+    
             p {
                 font-style: normal;
                 font-weight: normal;
                 font-size: 0.875em;
                 line-height: 1.125em;
             }
+    
+            .second {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 1em;
+                line-height: 1.5em;
+            }
+    
+            a {
+                text-decoration: none;
+                color: black;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 1em;
+                line-height: 1.19em;
+                margin-right: 0.625em;
+            }
+            
+            @include bp(phone) {
 
-            img {
-                width: 17.17em;
-                height: 11.25em;
+
+                img {
+                display: block;
+                width: 100%;
+                height: auto;
+                }
+            }
+            
+        }
+        
+        .technology-news {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: space-between;
+            flex: 0 1 50%;
+            
+    
+            .news-box {
+                display: flex;
+                flex: 0 1 45%;
+
+                @include bp(phone) {
+                    flex-direction: column;
+                }
+                align-items: center;
+                padding: 1em;
+    
+                span {
+                    font-weight: 600;
+                    font-size: 1.25em;
+                    line-height: 1.625em;
+                }
+    
+                p {
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 0.875em;
+                    line-height: 1.125em;
+                }
+    
+                img {
+                    // display: block;
+                    // width: 90%;
+                    // height: auto;
+                }
             }
         }
     }
