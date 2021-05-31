@@ -1,70 +1,112 @@
 .site-sport {
-    background: #FAFAFA;
+    position: relative;
     margin-top: 3.125em;
     flex: 0 1 100%;
-
-    @include bp(tablet) { 
-        margin: 1em;
-    }
+    z-index: 3;
 
     hr {
+        @include bp(mobile) {
+            margin: 0;
+        }
         border: 1px solid #DDDDDD;
+        z-index: 5;
+        position: relative;
+        max-width: 120em;
+        margin: 0 -21.875em;
     }
 
-    .sport-wrapper-page {
-        display: flex;
-        flex-wrap: wrap;
-        align-content: center;
-        justify-content: space-between;
-        min-height: 30.31em;
+    .sprot-background {
+        @include bp(mobile) {
+            background-color: #FAFAFA;
 
-        @include bp(phone) {
-            justify-content: center;
-            margin: 1em;
         }
+
+        &::before {
+            @include bp(mobile) {
+                position: relative;
+
+            }
+
+            margin:0 -21.785em;
+            content: '';
+            position: absolute;
+            max-width: 120em;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            left: 0;
+            background-color: #FAFAFA;
+            z-index: 1;
+        }
+
         
-        h3{
-            flex: 0 1 100%;
-            font-style: normal;
-            font-weight: 800;
-            font-size: 1.25em;
-            line-height: 1.5em;
-            margin-bottom: 2em;
-            padding-left: 0.5em;
-        }
-
-        .sport-news-box {
+    
+        .sport-wrapper-page {
             display: flex;
             flex-wrap: wrap;
-            flex-direction: row;
-            flex: 0 1 25%;
-            max-width: 17.19em;
-            min-height: 11.25em;
-            margin-bottom: 4.375em;
+            align-content: center;
+            justify-content: space-between;
+            min-height: 30.31em;
             
-
-            span {
-                @include bp (phone) {
-                    font-size: 1.1em;
-                    line-height: 1.2em;
-                    padding-bottom: 0.5em;
-                }
-
+    
+            @include bp(mobile) {
+                justify-content: space-evenly;
+                
+            }
+            
+            h3{
                 flex: 0 1 100%;
                 font-style: normal;
-                font-weight: 600;
+                font-weight: 800;
                 font-size: 1.25em;
-                line-height: 1.625em;
-                color: #000000;
+                line-height: 1.5em;
+                margin-bottom: 2em;
+                padding-left: 0.5em;
             }
-
-            p {
-                font-style: normal;
-                font-weight: normal;
-                font-size: 0.875em;
-                line-height: 1.125em;
-
+    
+            .sport-news-box {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                flex: 0 1 25%;
+                max-width: 17.19em;
+                min-height: 11.25em;
+                margin-bottom: 4.375em;
+                z-index: 10;
+    
+                @include bp(mobile) {
+                   justify-content: space-evenly;
+                    
+                }
+                
+    
+                span {
+                    @include bp (phone) {
+                        font-size: 1.1em;
+                        line-height: 1.2em;
+                        padding-bottom: 0.5em;
+                    }
+    
+                    flex: 0 1 100%;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 1.25em;
+                    line-height: 1.625em;
+                    color: #000000;
+                }
+    
+                p {
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 0.875em;
+                    line-height: 1.125em;
+    
+                }
+    
+            
             }
         }
     }
+
+    
 }

@@ -99,32 +99,31 @@
         }
 
         .technology-news {
+            @include bp(mobile) {  
+                justify-content: center;
+                flex: 0 1 90%;
+                
+            }
+
             display: flex;
             flex-wrap: wrap;
             flex-direction: row;
-            justify-content: space-around;
+            justify-content: space-evenly;
             flex: 0 1 50%;
-
 
             .news-box {
                 display: flex;
                 flex-wrap: wrap;
                 flex: 0 1 45%;
-
-                @include bp(phone) {
-                    flex-direction: column; 
-                    justify-content: center;
-                    padding: 1em;
-                    flex: 0 1 90%;
-                }
-
-               
+                justify-content: space-evenly;
+                padding: 0.5em;
 
                 span {
                     @include bp (mobile) {
                         font-size: 1.1em;
                         line-height: 1.2em;
                         padding-bottom: 0.5em;
+                        text-align: center;
                     }
     
                     flex: 0 1 100%;
@@ -132,22 +131,16 @@
                     font-weight: 600;
                     font-size: 1.25em;
                     line-height: 1.625em;
-                    color: #000000;
-    
+                    color: #000000;  
                 }
 
                 p {
+                    flex: 0 1 60%;
                     font-style: normal;
                     font-weight: normal;
                     font-size: 0.875em;
                     line-height: 1.125em;
                 }
-
-                // img {
-                //     // display: block;
-                //     // width: 90%;
-                //     // height: auto;
-                // }
             }
         }
     }

@@ -1,42 +1,114 @@
 .news-page {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    // max-width: 76.25em;
-    // margin: 0 auto;
+    flex: 0 1 100%;
+    flex-direction: column;
+    
+    @include bp(mobile) {
+        justify-content: center;
+    }
 
-    .hr-top {
-        width: 76.25em;
-        height: 0.25em;
-        background: #D24545;
+    hr {
+        border: 2px solid #D24545;
         border-radius: 0.3125em;
         margin-top: 3.125em;
     }
 
-    h3 {
-        flex: 0 1 100%;
-        padding: 0;
-        font-style: normal;
-        font-weight: 800;
-        font-size: 1.25em;
-        line-height: 1.5em;
-        margin-bottom: 1.5em;
-    }
-
-    .last-news {
+    .news-page-wrapper {
         display: flex;
         flex-wrap: wrap;
+        flex-direction: row; 
+        justify-content: space-evenly;
         
-        justify-content: space-around;
-        flex: 0 1 50%;
+        // @include bp(mobile) {
+        //     justify-content: center;
+            
+        // }
 
-        .last-news-box {
-            flex: 0 1 45%;
+        h3 {
+            flex: 0 1 100%;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 1.25em;
+            line-height: 1.5em;
+            margin-bottom: 2em;
+            padding-left: 0.5em;
+        }
+
+        .last-news { 
+            @include bp(mobile) {  
+                justify-content: center;
+                flex: 0 1 90%;
+                
+            }
+
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-evenly;
+            flex: 0 1 50%;
+            
+            .last-news-box {
+                display: flex;
+                flex-wrap: wrap;
+                flex: 0 1 45%;
+                justify-content: space-evenly;
+                padding: 0.5em;
+
+                span {
+                    @include bp (mobile) {
+                        font-size: 1.1em;
+                        line-height: 1.2em;
+                        padding-bottom: 1em;
+                        text-align: center;
+                    }
+    
+                    flex: 0 1 100%;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 1.25em;
+                    line-height: 1.625em;
+                    color: #000000;
+                }
+
+                p {
+
+                    flex: 0 1 60%;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 0.875em;
+                    line-height: 1.125em;
+                }
+
+            }
+        }
+
+        .big-news {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            flex: 0 1 50%;
+            
+
+            @include bp(mobile)  {
+            justify-content: center;                
+            flex-direction: row;
+            padding: 1em;
+            flex: 0 1 90%;               
+            }
 
             span {
+                @include bp (phone) {
+                    font-size: 1.1em;
+                    line-height: 1.2em;
+                    padding-bottom: 0.5em;
+                }
+
+                flex: 0 1 100%;
+                font-style: normal;
                 font-weight: 600;
                 font-size: 1.25em;
                 line-height: 1.625em;
+                color: #000000;
+
             }
 
             p {
@@ -44,49 +116,33 @@
                 font-weight: normal;
                 font-size: 0.875em;
                 line-height: 1.125em;
-            } 
+            }
+
+            .second {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 1em;
+                line-height: 1.5em;
+            }
+
+            a {
+                text-decoration: none;
+                color: black;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 1em;
+                line-height: 1.19em;
+                margin-right: 0.625em;
+            }
+
+            @include bp(phone) {
+               
+                img {
+                display: block;
+                width: 100%;
+                height: auto;
+                }
+            }
         }
     }
-
-    .big-news {
-        display: flex;
-        flex-wrap: wrap;
-        flex: 0 1 44%;
-
-        span {
-            font-weight: 600;
-            font-size: 1.25em;
-            line-height: 1.625em;
-        }
-
-        p {
-            font-style: normal;
-            font-weight: normal;
-            font-size: 0.875em;
-            line-height: 1.125em;
-        }
-
-        .second {
-            font-style: normal;
-            font-weight: normal;
-            font-size: 1.125em;
-            line-height: 1.5em;
-        }
-
-        a {
-            text-decoration: none;
-            color: black;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 1em;
-            line-height: 1.1875em;
-            margin-right: 0.625em;
-        }
-
-        img {
-            width: 36.875em;
-            height: 24.688em;
-        }
-    }
-
 }

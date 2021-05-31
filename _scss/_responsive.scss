@@ -1,8 +1,8 @@
 $breakpoints: (
   'phone':      ( max-width:  600px ),
   'tablet':     ( max-width:  900px ),
-  'mobile':     ( max-width: 1220px ),
-  'desktop':    ( min-width: 1221px ),
+  'mobile':     ( max-width: 1200px ),
+  'desktop':    ( min-width: 1201px ),
   'large':      ( min-width: 1600px ),
 ) !default;
 

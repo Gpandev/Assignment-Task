@@ -17,7 +17,7 @@
 
         @include bp(mobile) {
             justify-content: space-evenly;
-            margin: 1em;
+            
         }
 
         h3 {
@@ -33,18 +33,17 @@
         .sex-box {
             display: flex;
             flex-wrap: wrap;
-            // flex-direction: row;
-            flex: 0 1 33%;
+            flex-direction: row;
+            flex: 0 1 32%;
             max-width: 23.75em;
             min-height: 15.625em;
             margin-bottom: 4.375em;
-            padding: 0.5em;
+            
 
             @include bp(mobile) {
                 justify-content: space-evenly;
-                flex: 0 1 100%;
-                margin: 1em;
-                padding: 0.5em;
+                flex: 0 1 90%;
+                padding-left: 0.25em;
             }
 
             span {
@@ -67,8 +66,14 @@
                 font-size: 0.875em;
                 line-height: 1.125em;
             }
+
+            @include bp(tablet) {
+                img {
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                }
+            }
         }
-
     }
-
 }

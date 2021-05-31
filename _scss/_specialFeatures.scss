@@ -1,70 +1,104 @@
 .site-features {
     flex: 0 1 100%;
-    background-color: #B53838;
+    position: relative;
+    z-index: 2;
+    
+    
+    .features-background {
+        @include bp(mobile) {
+            background-color: #B53838;
 
-    .special-features-wrapper {
-        display: flex;
-        flex-wrap: wrap;
-        align-content: center;
-        justify-content: space-between;
-        min-height: 34.375em;
-
-        @include bp(phone) {
-            justify-content: center;
-            margin: 1em;
         }
         
-        h3{
-            flex: 0 1 100%;
-            font-style: normal;
-            font-weight: 800;
-            font-size: 1.25em;
-            line-height: 1.5em;
-            margin-bottom: 2em;
-            padding-left: 0.5em;
+        &::before {
+            @include bp(mobile) {
+                position: relative;
+
+            }
+            margin:0 -21.785em;
+            content: '';
+            position: absolute;
+            max-width: 120em;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            left: 0;
+            background-color: #B53838;
+            z-index: 1;
         }
-        
-        .site-specialFeatures {
+
+        .special-features-wrapper {
             display: flex;
             flex-wrap: wrap;
-            flex-direction: row; 
-            flex: 0 1 33%;
-            color: white;
+            align-content: center;
+            justify-content: space-between;
+            min-height: 34.375em;
+
+            @include bp(mobile) {
+                justify-content: space-evenly;
+                
+            }
             
-            max-width: 23.75em;
-            min-height: 15.625em;
-
-            span {
-                @include bp (phone) {
-                    font-size: 1.1em;
-                    line-height: 1.2em;
-                    padding-bottom: 0.5em;
-                }
-
+            h3{
                 flex: 0 1 100%;
                 font-style: normal;
-                font-weight: 600;
+                font-weight: 800;
                 font-size: 1.25em;
-                line-height: 1.625em;
-                color: #000000;
-            }
-
-            p {
-                font-style: normal;
-                font-weight: normal;
-                font-size: 0.875em;
-                line-height: 1.125em;
-
+                line-height: 1.5em;
+                margin-bottom: 2em;
+                padding-left: 0.5em;
+                color: white;
+                z-index: 10;
             }
             
-            @include bp(mobile) {
-               img {
-                    display: block;
-                    width: 100%;
-                    height: auto;
-                }  
+            .site-specialFeatures {
+                display: flex;
+                flex-wrap: wrap;
+                flex: 0 1 33%;
+                color: white;
+                max-width: 23.75em;
+                min-height: 15.625em;
+                
+                z-index: 10;
+
+                @include bp(mobile) {
+                    justify-content: space-evenly;
+                    flex: 0 1 100%;
+                    
+                }
+
+                span {
+                    @include bp (phone) {
+                        font-size: 1.1em;
+                        line-height: 1.2em;
+                        padding-bottom: 0.5em;
+                    }
+
+                    flex: 0 1 100%;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 1.25em;
+                    line-height: 1.625em;
+                    color: white;
+                }
+
+                p {
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 0.875em;
+                    line-height: 1.125em;
+
+                }
+                
+                @include bp(mobile) {
+                img {
+                        display: block;
+                        width: 100%;
+                        height: auto;
+                    }  
+                }
+                
             }
-            
-        }
-    }  
+        }   
+    } 
 }
